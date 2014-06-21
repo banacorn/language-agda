@@ -1,0 +1,41 @@
+'scopeName': 'source.agda'
+'fileTypes': [
+  'agda'
+]
+'name': 'Agda'
+'patterns': [
+  {
+    'include': '#comment'
+  }
+  {
+    'include': '#keyword'
+  }
+]
+'repository':
+  'comment':
+    'patterns': [
+      {
+        'name': 'comment.line.double-dash.agda'
+        'begin': '--'
+        'end': '\\n'
+      }
+      {
+        'name': 'comment.block.agda'
+        'begin': '\\{-'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.begin.agda'
+        'end': '-\\}'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.end.agda'
+        'patterns': [
+          {
+            'include': '#comment'
+          }
+        ]
+      }
+    ]
+  'keyword':
+    'name': 'keyword.other.agda'
+    'match': '\\b(abstract|constructor|data|field|forall|hiding|import|in|infix|infixl|infixr|let|module|mutual|open|postulate|primitive|Prop|private|public|quoteGoal|quoteTerm|quote|record|renaming|rewrite|Set[0-9]*|syntax|unquote|using|where|with)\\b'

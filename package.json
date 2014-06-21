@@ -1,0 +1,16 @@
+{
+  "name"         : "language-agda",
+  "version"      : "0.1.0",
+  "description"  : "A short description of your package",
+  "repository"   : "https://github.com/darinmorrison/atom-language-agda",
+  "license"      : "MIT",
+  "engines"      : {
+    "atom" : ">= 0.106.0"
+  },
+  "bugs"         : {
+    "url"  : "https://github.com/darinmorrison/atom-language-agda/issues"
+  },
+  "dependencies" : {
+  },
+  "main"         : "./index"
+}
