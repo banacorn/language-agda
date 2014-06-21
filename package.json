@@ -1,7 +1,7 @@
 {
   "name"         : "language-agda",
   "version"      : "0.1.0",
-  "description"  : "A short description of your package",
+  "description"  : "Agda language support for the Atom editor",
   "repository"   : "https://github.com/darinmorrison/atom-language-agda",
   "license"      : "MIT",
   "engines"      : {
