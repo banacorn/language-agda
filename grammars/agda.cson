@@ -16,7 +16,7 @@
     'patterns': [
       {
         'name': 'comment.line.double-dash.agda'
-        'begin': '--'
+        'begin': '--(?!.*#-\}$)'
         'end': '\\n'
       }
       {
