@@ -1,16 +1,15 @@
 {
-  "name"         : "language-agda",
-  "version"      : "0.1.1",
-  "description"  : "Agda language support for the Atom editor",
-  "repository"   : "https://github.com/darinmorrison/atom-language-agda",
-  "license"      : "MIT",
-  "engines"      : {
-    "atom" : ">= 0.106.0"
+  "name": "language-agda",
+  "version": "0.2.0",
+  "description": "Agda language support for the Atom editor",
+  "repository": "https://github.com/darinmorrison/atom-language-agda",
+  "license": "MIT",
+  "engines": {
+    "atom": ">= 0.106.0"
   },
-  "bugs"         : {
-    "url"  : "https://github.com/darinmorrison/atom-language-agda/issues"
+  "bugs": {
+    "url": "https://github.com/darinmorrison/atom-language-agda/issues"
   },
-  "dependencies" : {
-  },
-  "main"         : "./index"
+  "dependencies": {},
+  "main": "./index"
 }
