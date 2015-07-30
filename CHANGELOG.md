@@ -1,3 +1,6 @@
+## 0.2.2
+* literal agda source recognition (no special treatment on the grammar yet)
+
 ## 0.2.1
 * line comments done right
 

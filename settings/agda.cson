@@ -1,3 +1,6 @@
 '.source.agda':
   'editor':
     'commentStart': '-- '
+'.source.lagda':
+  'editor':
+    'commentStart': '-- '
