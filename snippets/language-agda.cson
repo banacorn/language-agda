@@ -20,6 +20,20 @@
 
 '.source.agda':
 
+    'data types':
+        'prefix': 'data'
+        'body': """
+            data $1 : $2 where
+                $3
+        """
+
+    'with-abstraction':
+        'prefix': 'with'
+        'body': """
+            with $1
+            ... | p
+        """
+
     '≡-Reasoning':
         'prefix': 'eq'
         'body': """
