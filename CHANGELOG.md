@@ -1,3 +1,6 @@
+## 0.2.3
+* add some snippets for equational/inequational reasoning and with-abstraction
+
 ## 0.2.2
 * literal agda source recognition (no special treatment on the grammar yet)
 

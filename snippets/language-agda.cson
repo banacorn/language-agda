@@ -31,7 +31,7 @@
         'prefix': 'with'
         'body': """
             with $1
-            ... | p
+            ... | $2
         """
 
     '≡-Reasoning':
