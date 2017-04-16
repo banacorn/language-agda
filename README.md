@@ -95,3 +95,13 @@ start
     {!   !}
 □
 ```
+
+## How to contribute
+
+1. clone the repo and load it as a development package
+2. open the repo in the development mode
+
+```bash
+apm develop language-agda
+atom -d ~/github/language-agda
+```
