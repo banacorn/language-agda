@@ -149,7 +149,7 @@ repository:
     end: "-}"
     name: "comment.block.agda"
   dashComment:
-    begin: "(--) "
+    begin: "(--)"
     beginCaptures:
       "0":
         name: "punctuation.definition.comment.agda"
