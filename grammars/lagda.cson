@@ -1,50 +1,50 @@
-'fileTypes': [
+fileTypes: [
   'lagda'
 ]
-'name': 'Literate Agda'
-'scopeName': 'text.tex.latex.agda'
-'patterns': [
+name: 'Literate Agda'
+scopeName: 'text.tex.latex.agda'
+patterns: [
   {
-    'begin': '^((\\\\)begin)({)(code|spec)(})(\\s*\\n)?'
-    'beginCaptures':
+    begin: '^((\\\\)begin)({)(code|spec)(})(\\s*\\n)?'
+    beginCaptures:
       '1':
-        'name': 'support.function.be.latex.agda'
+        name: 'support.function.be.latex.agda'
       '2':
-        'name': 'punctuation.definition.function.latex.agda'
+        name: 'punctuation.definition.function.latex.agda'
       '3':
-        'name': 'punctuation.definition.arguments.begin.latex.agda'
+        name: 'punctuation.definition.arguments.begin.latex.agda'
       '5':
-        'name': 'punctuation.definition.arguments.end.latex.agda'
-    'end': '^((\\\\)end)({)\\4(})'
-    'endCaptures':
+        name: 'punctuation.definition.arguments.end.latex.agda'
+    end: '^((\\\\)end)({)\\4(})'
+    endCaptures:
       '1':
-        'name': 'support.function.be.latex.agda'
+        name: 'support.function.be.latex.agda'
       '2':
-        'name': 'punctuation.definition.function.latex.agda'
+        name: 'punctuation.definition.function.latex.agda'
       '3':
-        'name': 'punctuation.definition.arguments.begin.latex.agda'
+        name: 'punctuation.definition.arguments.begin.latex.agda'
       '4':
-        'name': 'punctuation.definition.arguments.end.latex.agda'
-    'contentName': 'source.agda.embedded.latex.agda'
-    'name': 'meta.embedded.block.agda.latex.agda'
-    'patterns': [
+        name: 'punctuation.definition.arguments.end.latex.agda'
+    contentName: 'source.agda.embedded.latex.agda'
+    name: 'meta.embedded.block.agda.latex.agda'
+    patterns: [
       {
         'include': 'source.agda'
       }
     ]
   }
   {
-    'match': '(?<!\\\\verb)\\|((:?[^|]|\\|\\|)+)\\|'
-    'name': 'meta.embedded.text.agda.latex.agda'
-    'captures':
+    match: '(?<!\\\\verb)\\|((:?[^|]|\\|\\|)+)\\|'
+    name: 'meta.embedded.text.agda.latex.agda'
+    captures:
       '1':
-        'patterns': [
+        patterns: [
           {
-            'include': 'source.agda'
+            include: 'source.agda'
           }
         ]
   }
   {
-    'include': 'text.tex.latex'
+    include: 'text.tex.latex'
   }
 ]
