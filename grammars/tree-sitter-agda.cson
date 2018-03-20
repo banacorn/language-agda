@@ -12,5 +12,8 @@ scopes:
     'comment': 'comment.block'
     'pragma_name': 'keyword.other'
 
+    '"module"': 'keyword.other'
+    '"where"': 'keyword.other'
+
 comments:
     start: '-- '
