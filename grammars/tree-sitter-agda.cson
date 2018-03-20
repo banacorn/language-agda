@@ -1,0 +1,16 @@
+id: 'agda'
+name: 'Agda'
+type: 'tree-sitter'
+parser: 'tree-sitter-agda'
+legacyScopeName: 'source.agda'
+#
+fileTypes: ['agda']
+
+scopes:
+    'source_file': 'source.agda'
+
+    'comment': 'comment.block'
+    'pragma_name': 'keyword.other'
+
+comments:
+    start: '-- '
