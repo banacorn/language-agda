@@ -6,11 +6,19 @@ legacyScopeName: 'source.agda'
 #
 fileTypes: ['agda']
 
+comments:
+    start: '--'
+
+
 scopes:
     'source_file': 'source.agda'
-
     'comment': 'comment.block'
-    'pragma_name': 'keyword.other'
+
+    '"∀"': 'keyword.operator.agda'
+    '"forall"': 'keyword.operator.agda'
+    '"→"': 'keyword.operator.agda'
+    '"->"': 'keyword.operator.agda'
+
 
     '"abstract"': 'keyword.other'
     '"codata"': 'keyword.other'
@@ -87,7 +95,3 @@ scopes:
     '"REWRITE"': 'keyword.other'
     '"STATIC"': 'keyword.other'
     '"TERMINATING"': 'keyword.other'
-
-
-comments:
-    start: '-- '
