@@ -1,100 +1,16 @@
-# language-agda package
+# language-agda
 
-Adds syntax highlighting to [Agda](http://wiki.portal.chalmers.se/agda/pmwiki.php) files in Atom.
+Syntax highlighting for [Agda](http://agda.readthedocs.io)
 
-Contributions are greatly appreciated. Please fork this repository and open an pull request to add snippets, make grammar tweaks, etc.
+I know it's lacking, so read on!
 
-## Snippets
+## Revamping with `tree-sitter`
 
-### with-abstraction
+It's not until the mid 2010s when the human realized that, syntax highlighting
+should be done in **context-free grammar** rather than **regular expressions**.
 
-Whenever you need a with-abstraction
-
-```agda
-filter : {A : Set} → (A → Bool) → List A → List A
-filter p [] = []
-filter p (x ∷ xs) $1 = ?
-```
-
-Simply type `with` at the `$1` position before `= ?` and then press <kbd>tab</kbd> or <kbd>enter</kbd>, the snippet would set up a scaffolding with cursor positioned at`$1`, press <kbd>tab</kbd> to jump the cursor from `$1` to `$2`.
-
-```agda
-filter : {A : Set} → (A → Bool) → List A → List A
-filter p [] = []
-filter p (x ∷ xs) with $1
-... | $2 = ?
-```
-
-### (in)equational-reasoning
-
-`eq` for this:
-
-```agda
-begin
-    {! $1 !}
-≡⟨ {!   !} ⟩
-    {!   !}
-≡⟨ {!   !} ⟩
-    {!   !}
-≡⟨ {!   !} ⟩
-    {!   !}
-≡⟨ {!   !} ⟩
-    {!   !}
-∎
-```
-
-`eqs` for a small step:
-
-```agda
-≡⟨ {! $1 !} ⟩
-    {!   !}
-```
-
-`po` for this:
-
-```agda
-start
-    {!  !}
-≤⟨ {!   !} ⟩
-    {!   !}
-≤⟨ {!   !} ⟩
-    {!   !}
-≤⟨ {!   !} ⟩
-    {!   !}
-≤⟨ {!   !} ⟩
-    {!   !}
-□
-```
-
-note that the operators of pre-order reasoning are renamed to prevent conflicts with equational reasoning
-
-```agda
-open ≡-Reasoning
-open ≤-Reasoning renaming (begin_ to start_; _∎ to _□; _≡⟨_⟩_ to _≈⟨_⟩_)
-```
-
-also `pos` for a small step:
-
-```agda
-≤⟨ {!  !} ⟩
-    {!   !}
-```
-
-``px`` and ``pxs`` in case you have reflexive relations in pre-order reasoing:
-
-```agda
-start
-    {!  !}
-≈⟨ {!   !} ⟩
-    {!   !}
-≈⟨ {!   !} ⟩
-    {!   !}
-≈⟨ {!   !} ⟩
-    {!   !}
-≈⟨ {!   !} ⟩
-    {!   !}
-□
-```
+I'm currently working on [describing the syntax in context-free grammar](https://github.com/banacorn/tree-sitter-agda) with [tree-sitter](https://github.com/tree-sitter/tree-sitter).
+Sit tight!
 
 ## How to contribute
 
