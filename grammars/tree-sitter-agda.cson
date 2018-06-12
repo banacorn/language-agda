@@ -9,17 +9,93 @@ fileTypes: ['agda']
 comments:
     start: '--'
 
+folds: [
+    {
+        type: [
+            'comment'
+            'data'
+            'record'
+            'record_assignments'
+            'module'
+            'field'
+            'mutual'
+            'abstract'
+            'private'
+            'instance'
+            'macro'
+            'postulate'
+            'primitive'
+        ]
+    }
+    {
+        start: {index: 0, type: '{'}
+        end: {index: -1, type: '}'}
+    }
+    {
+        start: {index: 0, type: '('}
+        end: {index: -1, type: ')'}
+    }
+]
+
 
 scopes:
     'source_file': 'source.agda'
-    'comment': 'comment.block'
 
-    '"∀"': 'keyword.operator.agda'
-    '"forall"': 'keyword.operator.agda'
-    '"→"': 'keyword.operator.agda'
-    '"->"': 'keyword.operator.agda'
+    # puctuations
+    '"="': 'punctuation.binging.agda'
+    '":"': 'punctuation.colon.agda'
+    '"→"': 'punctuation.arrow.agda'
+    '"->"': 'punctuation.arrow.agda'
+    '"←"': 'punctuation.binding.agda'
+    '"<-"': 'punctuation.binding.agda'
+    '"∀"': 'punctuation.forall.agda'
+    '"forall"': 'punctuation.forall.agda'
+
+    '";"': 'meta.delimiter'
+    '","': 'meta.delimiter'
+
+    '"("': 'punctuation.definition.begin.bracket.round'
+    '")"': 'punctuation.definition.end.bracket.round'
+    '"{"': 'punctuation.definition.begin.bracket.curly'
+    '"}"': 'punctuation.definition.end.bracket.curly'
 
 
+    'comment': 'comment.block.agda'
+
+    # Constants
+    '"Prop"': 'constant.language'
+    '"Set"': 'constant.language'
+
+    #
+    # entity — an entity refers to a larger part of the document.
+    'data_name': 'entity.name.type.agda'
+    'record_name > qualified_name': 'entity.name.type.agda'
+    'function_name': 'entity.name.function.agda'
+    'module_name': 'entity.name.tag.agda'
+    'field_name': 'entity.name.function.agda'
+    'infix > binding_name': 'entity.name.function.agda'
+
+    # meta — the meta scope is generally used to markup larger parts of the document.
+    'function_clause': 'meta.function.agda'
+    'data': 'meta.data.agda'
+    'record': 'meta.record.agda'
+    'module': 'meta.module.agda'
+
+    # import directives
+    '"public"': 'keyword.directive'
+    '"public"': 'keyword.directive'
+    '"using"': 'keyword.directive'
+    '"hiding"': 'keyword.directive'
+    '"renaming"': 'keyword.directive'
+    '"to"': 'keyword.other'
+
+
+    '"module"': 'keyword.other'
+    '"as"': 'keyword.other'
+    '"open"': 'keyword.other'
+    '"import"': 'keyword.other'
+
+    # other keywords
     '"abstract"': 'keyword.other'
     '"codata"': 'keyword.other'
     '"coinductive"': 'keyword.other'
@@ -28,8 +104,6 @@ scopes:
     '"eta-equality"': 'keyword.other'
     '"field"': 'keyword.other'
     '"forall"': 'keyword.other'
-    '"hiding"': 'keyword.other'
-    '"import"': 'keyword.other'
     '"inductive"': 'keyword.other'
     '"infix"': 'keyword.other'
     '"infixl"': 'keyword.other'
@@ -38,35 +112,29 @@ scopes:
     '"overlap"': 'keyword.other'
     '"let"': 'keyword.other'
     '"macro"': 'keyword.other'
-    '"module"': 'keyword.other'
     '"mutual"': 'keyword.other'
     '"no-eta-equality"': 'keyword.other'
-    '"open"': 'keyword.other'
     '"pattern"': 'keyword.other'
     '"postulate"': 'keyword.other'
     '"primitive"': 'keyword.other'
     '"private"': 'keyword.other'
-    '"Prop"': 'keyword.other'
-    '"public"': 'keyword.other'
     '"quote"': 'keyword.other'
     '"quoteContext"': 'keyword.other'
     '"quoteGoal"': 'keyword.other'
     '"quoteTerm"': 'keyword.other'
     '"record"': 'keyword.other'
-    '"renaming"': 'keyword.other'
     '"rewrite"': 'keyword.other'
-    '"Set"': 'keyword.other'
     '"syntax"': 'keyword.other'
     '"tactic"': 'keyword.other'
-    '"to"': 'keyword.other'
     '"unquote"': 'keyword.other'
     '"unquoteDecl"': 'keyword.other'
     '"unquoteDef"': 'keyword.other'
-    '"using"': 'keyword.other'
     '"where"': 'keyword.other'
     '"do"': 'keyword.other'
     '"with"': 'keyword.other'
     '"in"': 'keyword.other'
+
+    # pragma
     '"BUILTIN"': 'keyword.other'
     '"CATCHALL"': 'keyword.other'
     '"COMPILED"': 'keyword.other'

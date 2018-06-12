@@ -2,15 +2,15 @@
 
 Syntax highlighting for [Agda](http://agda.readthedocs.io)
 
-I know it's lacking, so read on!
+## Enable `tree-sitter`
 
-## Revamping with `tree-sitter`
+The original grammar for Agda is somewhat lacking because it's written in **regular expressions**. However, with [tree-sitter](https://github.com/tree-sitter/tree-sitter), we can now describe
+the grammar with **context-free grammar**, which significantly improves the quality of syntax-highlighting and code-folding.
 
-It's not until the mid 2010s when the human realized that, syntax highlighting
-should be done in **context-free grammar** rather than **regular expressions**.
+![tree-sitter]
+(https://i.imgur.com/wzhXop3.png)
 
-I'm currently working on [describing the syntax in context-free grammar](https://github.com/banacorn/tree-sitter-agda) with [tree-sitter](https://github.com/tree-sitter/tree-sitter).
-Sit tight!
+To enable `tree-sitter`, which is still experimental for the time being, go to `Settings > Core`, and enable the checkbox saying *Use Tree Sitter Parsers* at the bottom of the page.
 
 ## How to contribute
 
