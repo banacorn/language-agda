@@ -1,6 +1,6 @@
 {
   "name": "language-agda",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "description": "Agda language support for the Atom editor",
   "repository": "https://github.com/banacorn/atom-language-agda",
   "license": "MIT",
