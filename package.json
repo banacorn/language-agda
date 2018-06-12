@@ -12,7 +12,7 @@
     "url": "https://github.com/banacorn/atom-language-agda/issues"
   },
   "dependencies": {
-    "tree-sitter-agda": "^1.0.4"
+    "tree-sitter-agda": "^1.0.5"
   },
   "main": "./index"
 }
