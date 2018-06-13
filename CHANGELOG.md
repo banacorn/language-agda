@@ -1,3 +1,12 @@
+## 1.0.2
+* Fix #9
+
+## 1.0.1
+* Fix #8
+
+## 1.0.0
+* Experiment with [tree-sitter-agda](https://github.com/tree-sitter/tree-sitter-agda)
+
 ## 0.2.3
 * add some snippets for equational/inequational reasoning and with-abstraction
 
