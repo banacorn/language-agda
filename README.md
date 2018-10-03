@@ -14,14 +14,6 @@ To enable `tree-sitter`, which is still experimental for the time being, go to `
 
 *Note: this whole tree-sitter thing is still experimental, but, how bad can it be? 😉*
 
-## Problems on Windows
-
-If you are getting problems saying something like `prebuild-install WARN install No prebuilt binaries found` on Windows, running this (as Administrator) might will help (thank @MatthijsBlom and @rjstone):
-
-```
-npm install --global --production windows-build-tools
-```
-
 ## How to contribute
 
 1. clone the repo and load it as a development package
