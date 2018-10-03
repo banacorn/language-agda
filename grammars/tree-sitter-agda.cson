@@ -1,8 +1,7 @@
-id: 'agda'
 name: 'Agda'
+scopeName: 'source.agda'
 type: 'tree-sitter'
 parser: 'tree-sitter-agda'
-legacyScopeName: 'source.agda'
 #
 fileTypes: ['agda']
 
