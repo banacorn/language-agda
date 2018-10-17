@@ -85,7 +85,7 @@ patterns: [
     name: "keyword.operator.agda"
   }
   {
-    match: "\\b(where|as|case|field|constructor|record|private|public|abstract|mutual)\\b"
+    match: "\\b(where|as|case|field|constructor|record|private|public|abstract|mutual|rewrite)\\b"
     name: "keyword.other.agda"
   }
   {
