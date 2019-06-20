@@ -1,18 +1,15 @@
 # language-agda
 
-Syntax highlighting for [Agda](http://agda.readthedocs.io)
-
-
-## Enable `tree-sitter`
-
-The original grammar for Agda is somewhat lacking because it's written in **regular expressions**. However, with [tree-sitter](https://github.com/tree-sitter/tree-sitter), we can now [describe
-the grammar](https://github.com/tree-sitter/tree-sitter-agda) with **context-free grammar**, which significantly improves the quality of syntax-highlighting and code-folding.
+Syntax highlighting for [Agda](http://agda.readthedocs.io) with [tree-sitter](https://github.com/tree-sitter/tree-sitter) and  [context-free grammar](https://github.com/tree-sitter/tree-sitter-agda)
 
 ![tree-sitter](https://i.imgur.com/7Pfmqjv.png)
 
-To enable `tree-sitter`, which is still experimental for the time being, go to `Settings > Core`, and enable the checkbox saying *Use Tree Sitter Parsers* at the bottom of the page.
+## Why does my Agda look so dull?
 
-*Note: this whole tree-sitter thing is still experimental, but, how bad can it be? 😉*
+That's probably because the version of Atom or langauge-agda you are using is too old.
+Humans were (and still are) highlighting source codes with regular expressions until very very recently.
+Please consider upgrading them to the latest version.
+If you are getting some scary error during the upgrade, please **uninstall** and then reinstall language-agda
 
 ## How to contribute
 

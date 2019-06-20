@@ -41,7 +41,7 @@ scopes:
     'source_file': 'source.agda'
 
     # puctuations
-    '"="': 'punctuation.binging.agda'
+    '"="': 'punctuation.binding.agda'
     '":"': 'punctuation.colon.agda'
     '"→"': 'punctuation.arrow.agda'
     '"->"': 'punctuation.arrow.agda'
