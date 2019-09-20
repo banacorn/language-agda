@@ -11,12 +11,11 @@ comments:
 folds: [
     {
         type: [
-            'comment'
+            'fields'
+            'function'
             'data'
             'record'
-            'record_assignments'
-            'module'
-            'field'
+            'generalize'
             'mutual'
             'abstract'
             'private'
@@ -24,6 +23,11 @@ folds: [
             'macro'
             'postulate'
             'primitive'
+            'macro'
+            'module'
+            'comment'
+            'record_assignments'
+            'field_assignments'
         ]
     }
     {
@@ -31,33 +35,59 @@ folds: [
         end: {index: -1, type: '}'}
     }
     {
+        start: {index: 0, type: '{{'}
+        end: {index: -1, type: '}}'}
+    }
+    {
+        start: {index: 0, type: '⦃'}
+        end: {index: -1, type: '⦄'}
+    }
+    {
         start: {index: 0, type: '('}
         end: {index: -1, type: ')'}
     }
 ]
 
-
 scopes:
     'source_file': 'source.agda'
 
-    # puctuations
+    # punctuations
     '"="': 'punctuation.binding.agda'
     '":"': 'punctuation.colon.agda'
     '"→"': 'punctuation.arrow.agda'
     '"->"': 'punctuation.arrow.agda'
     '"←"': 'punctuation.binding.agda'
     '"<-"': 'punctuation.binding.agda'
+    '"\\\\"': 'punctuation.lambda.agda'
+    '"λ"': 'punctuation.lambda.agda'
     '"∀"': 'punctuation.forall.agda'
     '"forall"': 'punctuation.forall.agda'
+    '"…"': 'punctuation.ellipsis.agda'
+    '"..."': 'punctuation.ellipsis.agda'
+    '".."': 'punctuation.dotdot.agda'
+    '"."': 'punctuation.dot.agda'
+    '"@"': 'punctuation.as.agda'
 
     '";"': 'meta.delimiter'
+    '"|"': 'meta.delimiter.bar'
     '","': 'meta.delimiter'
+    '"?"': 'meta.delimiter.hole'
 
     '"("': 'punctuation.definition.begin.bracket.round'
     '")"': 'punctuation.definition.end.bracket.round'
+    '"(|"': 'punctuation.definition.begin.idiom'
+    '"|)"': 'punctuation.definition.end.idiom'
+    '"⦇"': 'punctuation.definition.begin.idiom'
+    '"⦈"': 'punctuation.definition.end.idiom'
     '"{"': 'punctuation.definition.begin.bracket.curly'
     '"}"': 'punctuation.definition.end.bracket.curly'
+    '"{{"': 'punctuation.definition.begin.bracket.curly'
+    '"}}"': 'punctuation.definition.end.bracket.curly'
+    '"⦃"': 'punctuation.definition.begin.bracket.curly'
+    '"⦄"': 'punctuation.definition.end.bracket.curly'
 
+    '"{-#"': 'comment.pragma.start.agda'
+    '"#-}"': 'comment.pragma.end.agda'
 
     'comment': 'comment.block.agda'
 
@@ -67,14 +97,14 @@ scopes:
 
     # entity — an entity refers to a larger part of the document.
     'data_name': 'entity.name.type.agda'
-    'record_name > qualified_name': 'entity.name.type.agda'
+    'record_name > qid': 'entity.name.type.agda'
     'function_name': 'entity.name.function.agda'
     'module_name': 'entity.name.tag.agda'
     'field_name': 'entity.name.function.agda'
-    'infix > binding_name': 'entity.name.function.agda'
+    'infix > bid': 'entity.name.function.agda'
 
     # meta — the meta scope is generally used to markup larger parts of the document.
-    'function_clause': 'meta.function.agda'
+    'function': 'meta.function.agda'
     'data': 'meta.data.agda'
     'record': 'meta.record.agda'
     'module': 'meta.module.agda'
@@ -86,8 +116,6 @@ scopes:
     '"hiding"': 'keyword.directive'
     '"renaming"': 'keyword.directive'
     '"to"': 'keyword.other'
-
-
     '"module"': 'keyword.other'
     '"as"': 'keyword.other'
     '"open"': 'keyword.other'
@@ -102,6 +130,7 @@ scopes:
     '"eta-equality"': 'keyword.other'
     '"field"': 'keyword.other'
     '"forall"': 'keyword.other'
+    '"variable"': 'keyword.other'
     '"inductive"': 'keyword.other'
     '"infix"': 'keyword.other'
     '"infixl"': 'keyword.other'
@@ -135,29 +164,22 @@ scopes:
     # pragma
     '"BUILTIN"': 'keyword.other'
     '"CATCHALL"': 'keyword.other'
-    '"COMPILED"': 'keyword.other'
-    '"COMPILED_DATA"': 'keyword.other'
-    '"COMPILED_DATA_UHC"': 'keyword.other'
-    '"COMPILED_EXPORT"': 'keyword.other'
-    '"COMPILED_JS"': 'keyword.other'
-    '"COMPILED_TYPE"': 'keyword.other'
-    '"COMPILED_UHC"': 'keyword.other'
     '"DISPLAY"': 'keyword.other'
     '"ETA"': 'keyword.other'
-    '"HASKELL"': 'keyword.other'
-    '"IMPORT"': 'keyword.other'
-    '"IMPORT_UHC"': 'keyword.other'
     '"FOREIGN"': 'keyword.other'
     '"COMPILE"': 'keyword.other'
     '"IMPOSSIBLE"': 'keyword.other'
     '"INJECTIVE"': 'keyword.other'
     '"INLINE"': 'keyword.other'
+    '"NOINLINE"': 'keyword.other'
     '"MEASURE"': 'keyword.other'
     '"NO_TERMINATION_CHECK"': 'keyword.other'
     '"NO_POSITIVITY_CHECK"': 'keyword.other'
+    '"NO_UNIVERSE_CHECK"': 'keyword.other'
     '"NON_TERMINATING"': 'keyword.other'
     '"OPTIONS"': 'keyword.other'
     '"POLARITY"': 'keyword.other'
+    '"WARNING_ON_USAGE"': 'keyword.other'
     '"REWRITE"': 'keyword.other'
     '"STATIC"': 'keyword.other'
     '"TERMINATING"': 'keyword.other'

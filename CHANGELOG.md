@@ -1,3 +1,9 @@
+## 1.2.0
+* Upgrade tree-sitter-agda to v1.2.1 (rewrite)
+* Fix #19, #20, #21, and #22
+* Resolve previous issues regarding "let ... in" and do-notations
+* Update the list of keywords
+
 ## 1.1.0
 * Upgrade tree-sitter-agda to v1.1.0
 
