@@ -4,6 +4,10 @@ Syntax highlighting for [Agda](http://agda.readthedocs.io) with [tree-sitter](ht
 
 ![tree-sitter](https://i.imgur.com/7Pfmqjv.png)
 
+## Note
+
+If you are getting errors like **Failed to load a language-agda package grammar** after upgrading Atom, please **uninstall** and then **reinstall** the package.
+
 ## Why does my Agda look so dull?
 
 That's probably because the version of Atom or langauge-agda you are using is too old.
