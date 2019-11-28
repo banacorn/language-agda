@@ -10,7 +10,7 @@ If you are getting errors like **Failed to load a language-agda package grammar*
 
 ## Why does my Agda look so dull?
 
-That's probably because the version of Atom or langauge-agda you are using is too old.
+That's probably because the version of Atom or language-agda you are using is too old.
 Humans were (and still are) highlighting source codes with regular expressions until very very recently.
 Please consider upgrading them to the latest version.
 If you are getting some scary error during the upgrade, please **uninstall** and then reinstall language-agda
